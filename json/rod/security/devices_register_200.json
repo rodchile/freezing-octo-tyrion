@@ -1,0 +1,10 @@
+{
+    "status": {
+        "success": true
+    },
+    "profile": {
+        "firstName": "Daniel",
+        "lastName": "Aguilar",
+        "profile_picture": "/static/me.jpg"
+    }
+}
