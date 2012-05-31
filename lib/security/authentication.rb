@@ -16,6 +16,7 @@ module Jacket
       request_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
       get_http_variables request_params
       if (auth_attributes[:username].eql? "daguilar") && (auth_attributes[:password].eql? "123")
+        status 200
         response = File.open("json/rod/security/devices_register_200.json") { |f| f.read }
       else
         #Return 400.X HTTP Code Error
