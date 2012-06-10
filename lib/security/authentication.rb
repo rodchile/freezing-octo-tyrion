@@ -2,27 +2,37 @@ require 'sinatra/base'
 require 'json'
 module Jacket
   class Authentication < Sinatra::Base
-    def auth_attributes
-      @auth_attr ||= {}
+  
+    def success_request
+      status 200
+      content_type 'application/json'
     end
-
-    def get_http_variables(attributes)
-      attributes.each do |attr|
-        auth_attributes[attr] = params[attr]
-      end 
+    
+    def not_authorized
+      throw :halt, [ 401, 'Your credentials are not valid.']
     end
+    
+    def invalid_request
+      throw :halt, [ 400, 'Invalid Request.']
+    end
+    
+    def http_requested_parameters_nil?(attributes)
+       attributes.each do |attr|
+         if params[attr].nil?
+           invalid_request
+         end
+       end
+     end
         
     post '/devices/register' do
-      request_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
-      get_http_variables request_params
-      if (auth_attributes[:username].eql? "daguilar") && (auth_attributes[:password].eql? "123")
-        status 200
+      requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
+      http_requested_parameters_nil? requested_params
+      if (params[:username].eql? "daguilar") && (params[:password].eql? "123")
+        success_request
         response = File.open("json/rod/security/devices_register_200.json") { |f| f.read }
       else
-        #Return 400.X HTTP Code Error
+        not_authorized
       end
-      content_type 'application/json'
-      response
     end
   end
 end
