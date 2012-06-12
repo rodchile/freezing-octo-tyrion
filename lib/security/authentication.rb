@@ -1,8 +1,15 @@
 require 'sinatra/base'
 require 'json'
-module Jacket
+module Security
   class Authentication < Sinatra::Base
-  
+    
+    USER = 'rod'
+    JSON_FOLDER = 'json/'
+    
+    def module_name
+      self.class.to_s.split("::").first.downcase
+    end
+      
     def success_request
       status 200
       content_type 'application/json'
@@ -23,13 +30,26 @@ module Jacket
          end
        end
      end
-        
+     
+    def resource_name
+      resource = ""
+      request.path.split("/").each do |word|
+        next if word.eql? ""
+       resource += "_" + word
+      end
+      resource
+    end
+     
+    def prepare_json_response
+      response = File.open(JSON_FOLDER + USER + "/" + module_name + "/" + resource_name + "/" + status.to_s() +".json") { |f| f.read }
+    end
+             
     post '/devices/register' do
       requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
       http_requested_parameters_nil? requested_params
       if (params[:username].eql? "daguilar") && (params[:password].eql? "123")
         success_request
-        response = File.open("json/rod/security/devices_register_200.json") { |f| f.read }
+        prepare_json_response
       else
         not_authorized
       end
