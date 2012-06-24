@@ -1,8 +1,8 @@
 require 'rack/test'
+require 'json'
 require_relative '../lib/jacket'
 
 # setup test environment
-set :environment, :test
 
 def app
 	Sinatra::Application
@@ -12,23 +12,15 @@ RSpec.configure do |config|
   config.include(Rack::Test::Methods)
 end
 
-describe 'Authentication and Autorization Process' do
-  it "should register the device with a valid user" do
-    params = {:clientId => 'my-client-id',:clientSecret => 'my-client-secret',:username => 'daguilar',:password => '123',:deviceId => 'my-foo-device',:deviceName => 'my-device-name'}
-		post '/devices/register', params
-		last_response.body.should == File.open("json/rod/security/_devices_register/200.json") { |f| f.read }
-	end
-	
-	it "shouldn't register the device with a not valid user" do
-    params = {:clientId => 'my-client-id',:clientSecret => 'my-client-secret',:username => 'foo',:password => 'boo',:deviceId => 'my-foo-device',:deviceName => 'my-device-name'}
-	  post '/devices/register', params
-	  last_response.status.should == 401
-	end
-	
-	it "should be an invalid request" do
-    params = {}
-	  post '/devices/register', params
-	  last_response.status.should == 400
-	end
+module EntitiesHelpers
+  def create_valid_user
+    User.create(
+      :firstname      => "Test",
+      :lastname       => "User",
+      :username       => "my_testing_user",
+      :auth_code      => "1212",
+      :password       => "1212",
+      :access_token   => "6549bc75-74d0-4566-876e-f397d60f9f1d"
+    )
+  end
 end
-

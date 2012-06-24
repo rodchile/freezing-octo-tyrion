@@ -3,7 +3,7 @@ require 'json'
 module Security
   class Authentication < Sinatra::Base
     
-    USER = 'rod'
+    USER_ID = 'rod'
     JSON_FOLDER = 'json/'
     
     def module_name
@@ -41,13 +41,26 @@ module Security
     end
      
     def prepare_json_response
-      response = File.open(JSON_FOLDER + USER + "/" + module_name + "/" + resource_name + "/" + status.to_s() +".json") { |f| f.read }
+      response = File.open(JSON_FOLDER + USER_ID + "/" + module_name + "/" + resource_name + "/" + status.to_s() +".json") { |f| f.read }
     end
              
     post '/devices/register' do
       requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
       http_requested_parameters_nil? requested_params
-      if (params[:username].eql? "daguilar") && (params[:password].eql? "123")
+      user = User.first(:username => params[:username])
+      if user
+        success_request
+        prepare_json_response
+      else
+        not_authorized
+      end
+    end
+    
+    post '/oauth/user/authorize' do
+      requested_params = [:clientId,:clientSecret,:auth_code,:uri]
+      http_requested_parameters_nil? requested_params
+      user = User.first(:auth_code => params[:auth_code])
+      if user
         success_request
         prepare_json_response
       else

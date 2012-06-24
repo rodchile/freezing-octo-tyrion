@@ -1,5 +1,28 @@
 require 'sinatra'
+require 'data_mapper'
+require 'dm-migrations'
+
+require_relative 'model/user'
 require_relative 'security/authentication'
-module Jacket
-use Security::Authentication
+
+module Jacket  
+  configure :production do
+    ENV['DATABASE_URL'] = "sqlite://#{Dir.pwd}/db/jacket_production.db"
+  end
+  
+  configure :development  do
+    ENV['DATABASE_URL'] = "sqlite://#{Dir.pwd}/db/jacket_development.db"
+  end
+  
+  configure :test  do
+    ENV['DATABASE_URL'] = "sqlite://#{Dir.pwd}/db/jacket_test.db"
+  end
+   
+  #DB Setup
+  DataMapper.setup(:default, ENV['DATABASE_URL'])  
+  DataMapper.auto_upgrade!
+  DataMapper.finalize
+
+  use Security::Authentication
+
 end
