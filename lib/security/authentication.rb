@@ -1,7 +1,10 @@
 require 'sinatra/base'
 require 'json'
+require 'bcrypt'
+
 module Security
   class Authentication < Sinatra::Base
+    include OAuthUtilities
     
     USER_ID = 'rod'
     JSON_FOLDER = 'json/'
@@ -31,41 +34,47 @@ module Security
        end
      end
      
-    def resource_name
-      resource = ""
-      request.path.split("/").each do |word|
-        next if word.eql? ""
-       resource += "_" + word
+    
+    def resource_name(route)
+      resource = ''
+      route.split("/").each do |word|
+        if resource.empty?
+          resource = word
+          next
+        elsif word.eql?("*")
+          next
+        end
+         resource += "_" + word
       end
       resource
     end
-     
-    def prepare_json_response
-      response = File.open(JSON_FOLDER + USER_ID + "/" + module_name + "/" + resource_name + "/" + status.to_s() +".json") { |f| f.read }
+
+    def prepare_json_response(*args)
+      resource = (args.size < 2)? resource_name(request.path) : resource_name(args[1].split(" ").last)
+      response = File.open(JSON_FOLDER + USER_ID + "/" + module_name + "/" + resource + "/" + args[0] +".json") { |f| f.read }
     end
              
     post '/devices/register' do
       requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
       http_requested_parameters_nil? requested_params
-      user = User.first(:username => params[:username])
-      if user
-        success_request
-        prepare_json_response
-      else
-        not_authorized
-      end
-    end
+      
+      user = User.first(:username => params[:username])  
+      success_request
+      response = (!user.nil? && user.password == params[:password])? prepare_json_response('ok') : prepare_json_response('nok')
+    end  
     
     post '/oauth/user/authorize' do
       requested_params = [:clientId,:clientSecret,:auth_code,:uri]
       http_requested_parameters_nil? requested_params
       user = User.first(:auth_code => params[:auth_code])
-      if user
-        success_request
-        prepare_json_response
-      else
-        not_authorized
-      end
+      success_request
+      response = (!user.nil?)? prepare_json_response('ok') : prepare_json_response('nok')
+    end
+    
+    put '/devices/*/activate' do |deviceid|
+      user = api_user
+      success_request 
+      prepare_json_response 'ok', __method__.to_s()
     end
   end
 end

@@ -3,6 +3,7 @@ require 'data_mapper'
 require 'dm-migrations'
 
 require_relative 'model/user'
+require_relative 'security/oauth'
 require_relative 'security/authentication'
 
 module Jacket  
@@ -24,5 +25,4 @@ module Jacket
   DataMapper.finalize
 
   use Security::Authentication
-
 end

@@ -78,6 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   data_mapper
   dm-sqlite-adapter
   json
