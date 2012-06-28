@@ -1,0 +1,63 @@
+{
+"status": {
+    "success": true
+    },
+ "me": {
+    "userName": "abaeza",
+    "firstName": "Aquiles",
+    "lastName": "Baeza",
+    "profilePicture": "static/me.jpg",
+    "accounts": [
+        {
+         "acctId": "acct-0001",
+         "userName": "user-5111221",
+         "desc": "Checks Account",
+         "acctNick": "My checking account",
+         "acctNum": "123-121-11",
+         "acctType": "DDA",
+         "curCode": "CLP",
+         "ledger": "121122",
+         "avail": "121122",
+         "iconResource": "/static/house-icon.png"
+        },
+        {
+         "acctId": "acct-0007",
+         "userName": "user-5111221",
+         "desc": "Savings Account",
+         "acctNick": "My Savings",
+         "acctNum": "832-122-332",
+         "acctType": "DDA",
+         "curCode": "CLP",
+         "ledger": "153322",
+         "avail": "153322",
+         "iconResource": "/static/house-icon.png"
+        },
+        { 
+         "acctId": "acct-0002",
+         "userName": "user-5111221",
+         "desc": "Mastercard Gold",
+         "acctNick": "Wife’s Credit Card",
+         "acctNum": "1234-1234-1234-1234",
+         "acctType": "CCA",
+         "curCode": "CLP",
+         "availCredit": "230000",
+         "creditLimit": "500000",
+         "payoffAmt": "30000",
+         "iconResource": "/static/house-icon.png"
+        }, 
+        {
+         "acctId": "acct-0003",
+         "userName": "user-5111221",
+         "desc": "Visa Signature",
+         "acctNick": "Personal Credit Card",
+         "acctNum": "1234-1235-1215-5555",
+         "acctType": "CCA",
+         "curCode": "CLP",
+         "availCredit": "230000",
+         "creditLimit": "500000",
+         "payoffAmt": "0",
+         "iconResource": "/static/house-icon.png"
+        }
+        ]
+    }
+ }

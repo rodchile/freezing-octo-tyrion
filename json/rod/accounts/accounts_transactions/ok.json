@@ -1,0 +1,73 @@
+
+{
+ "status":{
+    "success": true
+ },
+ "transactions":[{
+    "trxId":"3d94b8657ba70b08b59cad32",
+    "internalTrxId":"345345",
+    "branchId":"454",
+    "trxDt":"2011-06-25T19:18:17+0000",
+    "trxEffDt":"2011-06-25T19:18:17+0000",
+    "description":"PAGO CUENTA ASEGURADORA MAGALLANES",
+    "docNum":"3345445345",
+    "trxType":"payments",
+    "amt":"40000",
+    "amtType":"D",
+    "newAcctBal":"600789",
+ "enrichment":{
+        "id":"435445783",
+        "attachments":[{
+            "id":"98423808305",
+            "createdTime":"2011-12-29T19:12:25+0000",
+            "picture":"http://photos-e.ak.efxcdn.net/photos-ak-snc1/v5041/89/51/40796308305/s40796308305_1960517_6704612.jpg",
+            "source":"http://a5.sphotos.ak.efxcdn.net/photos-ak-snc1/v5041/89/51/40796308305/n40796308305_1960517_6704612.jpg",
+            "images": [{
+                 "height": 402,
+                 "width": 604,
+                 "source": "http://a5.sphotos.ak.efxcdn.net/photos-ak-snc1/v5041/89/51/40796308305/n40796308305_1960517_6704612.jpg"
+                },
+                {
+                 "height": 119,
+                 "width": 180,
+                 "source": "http://photos-e.ak.efxcdn.net/photos-ak-snc1/v5041/89/51/40796308305/a40796308305_1960517_6704612.jpg"
+                },
+                {
+                 "height": 86,
+                 "width": 130,
+                 "source": "http://photos-e.ak.efxcdn.net/photos-ak-snc1/v5041/89/51/40796308305/s40796308305_1960517_6704612.jpg"
+                }],
+             "message":"pago de cuota",
+             "messageCreatedTime":"2011-12-29T20:18:16+0000"
+            }],
+        "checkin":{
+             "venue": {
+                        "address": "CRA.13NO.61-08",
+                        "branchId": 40,
+                        "category": "OFICINA",
+                        "id": "4f64b1357dd70b08b59bab74",
+                        "location": {
+                            "lat": 4.6479434587,
+                            "lon": -74.0636984718
+                        },
+                        "name": "CHAPINERO",
+                        "tags": {
+                            "net": "PMP"
+                        }
+                    },
+             "createdTime":"2011-12-29T19:14:24+0000",
+             "address":"Av Santa Benedicta 3455",
+             "location": {
+                "lat": -33.404546,
+                "lon": -70.572661
+                }
+        },
+        "counterParty":{
+            "refName":"",
+            "bankName":"",
+            "acctType":"",
+            "acctMask":""
+   }
+  }
+ }]
+ }

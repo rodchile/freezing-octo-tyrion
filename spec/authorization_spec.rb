@@ -29,7 +29,7 @@ describe 'Authentication and Autorization Process' do
 	it "should be an invalid register request" do
     params = {}
 	  post '/devices/register', params
-	  last_response.status.should == 400
+	  last_response.status.should == 401
 	end
 	
 	#Describes the access_token request
@@ -51,7 +51,7 @@ describe 'Authentication and Autorization Process' do
   it "should be an invalid authorization request" do
     params = {}
 	  post '/oauth/user/authorize', params
-	  last_response.status.should == 400
+	  last_response.status.should == 401
   end
   
   #Describes the Device Activation
@@ -65,7 +65,7 @@ describe 'Authentication and Autorization Process' do
   it "shouldn't accept the request without access_token" do
     params = {}
     put '/devices/foo-device/activate', params
-    last_response.status.should == 400
+    last_response.status.should == 401
   end
   
   it "shouldn't accept the request with a non valid access token" do

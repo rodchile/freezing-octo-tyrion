@@ -3,8 +3,11 @@ require 'data_mapper'
 require 'dm-migrations'
 
 require_relative 'model/user'
+require_relative 'helpers/helper_requests'
 require_relative 'security/oauth'
 require_relative 'security/authentication'
+require_relative 'accounts/accounts'
+require_relative 'transfers/internal_transfers'
 
 module Jacket  
   configure :production do
@@ -25,4 +28,6 @@ module Jacket
   DataMapper.finalize
 
   use Security::Authentication
+  use Accounts::Accounts
+  use Transfers::Internal
 end
