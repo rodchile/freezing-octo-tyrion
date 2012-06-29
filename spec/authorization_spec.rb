@@ -36,21 +36,21 @@ describe 'Authentication and Autorization Process' do
 	
 	it "should return a valid access token" do
     params = {:clientId => 'my-client-id',:clientSecret => 'my-client-secret',:auth_code => '1212',:uri => 'http://foo.bar'}
-	  post '/oauth/user/authorize', params
+	  post '/oauth/authorize', params
 	  json_answer  = JSON.parse(last_response.body)
-	  json_answer_file = JSON.parse(File.open("json/rod/security/oauth_user_authorize/ok.json") { |f| f.read })
+	  json_answer_file = JSON.parse(File.open("json/rod/security/oauth_authorize/ok.json") { |f| f.read })
 	  json_answer["access_token"].should == json_answer_file["access_token"]
   end
   
   it "shouldn't return an access token with a non valid authorization code" do
     params = {:clientId => 'my-client-id',:clientSecret => 'my-client-secret',:auth_code => 'non-valid-code',:uri => 'http://foo.bar'}
-	  post '/oauth/user/authorize', params
-		last_response.body.should == File.open("json/rod/security/oauth_user_authorize/nok.json") { |f| f.read }
+	  post '/oauth/authorize', params
+		last_response.body.should == File.open("json/rod/security/oauth_authorize/nok.json") { |f| f.read }
   end
   
   it "should be an invalid authorization request" do
     params = {}
-	  post '/oauth/user/authorize', params
+	  post '/oauth/authorize', params
 	  last_response.status.should == 401
   end
   

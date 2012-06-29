@@ -4,6 +4,10 @@ require 'json'
 module Security
   class Authentication < Sinatra::Base
     include OAuthUtilities, RequestsHelpers
+    
+    get '/' do
+      response = 'Hi there! Welcome to Jacket API.'
+    end
              
     post '/devices/register' do
       requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
@@ -14,7 +18,7 @@ module Security
       response = (!user.nil? && user.password == params[:password])? prepare_json_response('ok') : prepare_json_response('nok')
     end  
     
-    post '/oauth/user/authorize' do
+    post '/oauth/authorize' do
       requested_params = [:clientId,:clientSecret,:auth_code,:uri]
       http_requested_parameters_nil? requested_params
       user = User.first(:auth_code => params[:auth_code])

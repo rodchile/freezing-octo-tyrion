@@ -26,6 +26,18 @@ module Jacket
   DataMapper.setup(:default, ENV['DATABASE_URL'])  
   DataMapper.auto_upgrade!
   DataMapper.finalize
+  
+  user = User.first(:username => 'rod')
+  if user.nil?
+    user = User.create(
+      :firstname    =>  'Rodrigo',
+      :lastname     =>  'Garcia',
+      :username     =>  'rod',
+      :auth_code    =>  '1234',
+      :password     =>  'foo',
+      :access_token =>  '1234-abcd-lol-cat'
+    )
+  end
 
   use Security::Authentication
   use Accounts::Accounts
