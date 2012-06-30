@@ -10,7 +10,7 @@ module Security
     end
              
     post '/devices/register' do
-      requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
+      requested_params = [:client_id,:client_secret,:username,:password,:deviceId,:deviceName]
       http_requested_parameters_nil? requested_params
       
       user = User.first(:username => params[:username])  
@@ -19,7 +19,7 @@ module Security
     end  
     
     post '/oauth/authorize' do
-      requested_params = [:clientId,:clientSecret,:auth_code,:uri]
+      requested_params = [:client_id,:client_secret,:auth_code,:uri]
       http_requested_parameters_nil? requested_params
       user = User.first(:auth_code => params[:auth_code])
       success_request
