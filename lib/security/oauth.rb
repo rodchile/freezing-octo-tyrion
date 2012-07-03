@@ -13,7 +13,7 @@ module OAuthUtilities
      throw :halt, [401,'
       {
         "error": "invalid_token",
-        "error_description": "Invalid access token #{access_token}."
+        "error_description": "Invalid access token."
       }']
   end
     
