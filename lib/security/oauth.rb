@@ -18,11 +18,11 @@ module OAuthUtilities
   end
     
   def access_token
-    token = (params[:Authorization].nil?)? invalid_request : params[:Authorization].delete("OAuth2 ")
+    token = (env["HTTP_AUTHORIZATION"].nil?)? invalid_request : env["HTTP_AUTHORIZATION"].gsub("OAuth2 ","")
   end
   
   def api_user
-    secure_user = User.first(:access_token => access_token)
+    secure_user = User.first(:oauth_token => access_token)
     invalid_access_token if secure_user.nil?
     secure_user
   end

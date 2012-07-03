@@ -31,7 +31,7 @@ module Jacket
       :username     =>  'rod',
       :auth_code    =>  '1234',
       :password     =>  'foo',
-      :access_token =>  '1234-abcd-lol-cat'
+      :oauth_token =>  '1234-abcd-lol-cat'
     )
   end
 

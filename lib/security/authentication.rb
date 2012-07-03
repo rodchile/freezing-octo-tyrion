@@ -10,7 +10,7 @@ module Security
     end
              
     post '/devices/register' do
-      requested_params = [:client_id,:client_secret,:username,:password,:deviceId,:deviceName]
+      requested_params = [:clientId,:clientSecret,:username,:password,:deviceId,:deviceName]
       http_requested_parameters_nil? requested_params
       
       user = User.first(:username => params[:username])  
@@ -19,11 +19,16 @@ module Security
     end  
     
     post '/oauth/authorize' do
-      requested_params = [:client_id,:client_secret,:auth_code,:uri]
+      requested_params = [:client_id,:client_secret,:code,:redirect_uri]
       http_requested_parameters_nil? requested_params
-      user = User.first(:auth_code => params[:auth_code])
+      user = User.first(:auth_code => params[:code]) 
+      access_key = user.oauth_token.to_s() if !user.nil?
+      response = (user.nil?)? prepare_json_response('nok') : '{
+        "access_token": "' + access_key + '",
+        "expires_in": 31535999
+      }'
       success_request
-      response = (!user.nil?)? prepare_json_response('ok') : prepare_json_response('nok')
+      response
     end
     
     put '/devices/*/activate' do |deviceid|

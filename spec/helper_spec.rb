@@ -20,7 +20,7 @@ module EntitiesHelpers
       :username       => "my_testing_user",
       :auth_code      => "1212",
       :password       => "1212",
-      :access_token   => "6549bc75-74d0-4566-876e-f397d60f9f1d"
+      :oauth_token    => "6549bc75-74d0-4566-876e-f397d60f9f1d"
     )
   end
 end

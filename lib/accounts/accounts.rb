@@ -8,7 +8,7 @@ module Accounts
     ['/users/me','/accounts/*/transactions'].each do |path|
       get(path) {
         user = api_user
-        success_request 
+        success_request
         prepare_json_response 'ok', __method__.to_s()
       }
     end
