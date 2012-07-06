@@ -43,7 +43,11 @@ module RequestsHelpers
   end
 
   def prepare_json_response(*args)
-    resource = (args.size < 2)? resource_name(request.path) : resource_name(args[1].split(" ").last)
-    response = File.open(JSON_FOLDER + USER_ID + "/" + module_name + "/" + resource + "/" + args[0] +".json") { |f| f.read }
+    #Variable lenght of variables
+    #[0] = name of the json file
+    #[1] = name of the user_id
+    #[2] = name of the resource called
+    resource = (args.size < 3)? resource_name(request.path) : resource_name(args[2].split(" ").last)
+    response = File.open(JSON_FOLDER + args[1] + "/" + module_name + "/" + resource + "/" + args[0] +".json") { |f| f.read }
   end
 end

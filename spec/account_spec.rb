@@ -29,7 +29,7 @@ describe 'ME service' do
     
   it "should get the ME answer for the test user" do
     get @route, '', "HTTP_AUTHORIZATION" => 'OAuth2 6549bc75-74d0-4566-876e-f397d60f9f1d'
-    last_response.body.should == File.open("json/rod/accounts/users_me/ok.json") { |f| f.read }
+    last_response.body.should == File.open("json/my_testing_user/accounts/users_me/ok.json") { |f| f.read }
   end
 end
 
@@ -49,6 +49,6 @@ describe 'Transactions service' do
   
   it "should get the transactions for the test user" do
     get @route, '', "HTTP_AUTHORIZATION" => 'OAuth2 6549bc75-74d0-4566-876e-f397d60f9f1d'
-    last_response.body.should == File.open("json/rod/accounts/accounts_transactions/ok.json") { |f| f.read }
+    last_response.body.should == File.open("json/my_testing_user/accounts/accounts_transactions/ok.json") { |f| f.read }
   end
 end

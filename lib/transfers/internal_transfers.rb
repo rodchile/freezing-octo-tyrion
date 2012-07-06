@@ -9,7 +9,7 @@ module Transfers
       post(path) {
         user = api_user
         success_request 
-        prepare_json_response 'ok', __method__.to_s()
+        prepare_json_response 'ok', user.username ,__method__.to_s()
       }
     end
     

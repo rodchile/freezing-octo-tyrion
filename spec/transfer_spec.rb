@@ -31,6 +31,6 @@ describe 'Internal Transfers service' do
     
   it "should do an internal transfer for the test user" do
     post @route, '', "HTTP_AUTHORIZATION" => 'OAuth2 6549bc75-74d0-4566-876e-f397d60f9f1d'
-    last_response.body.should == File.open("json/rod/transfers/transfer_internal/ok.json") { |f| f.read }
+    last_response.body.should == File.open("json/my_testing_user/transfers/transfer_internal/ok.json") { |f| f.read }
   end
 end
