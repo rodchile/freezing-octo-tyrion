@@ -1,0 +1,17 @@
+{
+  "internalTransfer": {
+    "acctRef": "13106",
+    "amt": 12.95,
+    "amtType": null,
+    "branchId": 0,
+    "counterParty": null,
+    "description": "mySubject",
+    "enrichment": null,
+    "internalTrxId": "2e9640d9421a",
+    "newAcctBal": null,
+    "trxDt": "2012-05-23T15:08:31+0000",
+    "trxEffDt": null,
+    "trxId": null
+  },
+  "status": {"success": true}
+}

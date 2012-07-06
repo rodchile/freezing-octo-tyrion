@@ -33,6 +33,22 @@ module Jacket
       :password     =>  'foo',
       :oauth_token  =>  '1234-abcd-lol-cat'
     )
+    user = User.create(
+      :firstname    =>  'Rodrigo',
+      :lastname     =>  'Pizarro',
+      :username     =>  'rpizarro',
+      :auth_code    =>  '1234',
+      :password     =>  'foo',
+      :oauth_token  =>  '1234-abcd-lol-gholie'
+    ) 
+    user = User.create(
+      :firstname    =>  'Arley',
+      :lastname     =>  'Duarte',
+      :username     =>  'aduarte',
+      :auth_code    =>  '1234',
+      :password     =>  'foo',
+      :oauth_token  =>  '1234-abcd-lol-senorito'
+    ) 
   end
 
   use Security::Authentication
