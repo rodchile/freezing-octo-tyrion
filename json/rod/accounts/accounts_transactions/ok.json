@@ -1,326 +1,258 @@
 {
-  "status": {"success": true},
-  "transactions": [
-    {
-      "acctRef": null,
-      "amt": 1000,
-      "amtType": "D",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Consignacion en Oficina $20.000.000.00 en efectivo $0.00 en cheque",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-01T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+    "status": {
+        "success": true
+    },
+    "transactions": [
+        {
+            "acctRef": null,
+            "amt": 1000,
+            "amtType": "D",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "34f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6479434587,
-              "lon": -74.0636984718
+            "counterParty": null,
+            "description": "Consignacion en Oficina $20.000.000.00 en efectivo $0.00 en cheque",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "34f661dcfe4b0022c5bd5c8a8"
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "455444f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-10T17:26:56-0400",
+            "trxEffDt": "2012-06-10T00:00:00-0400",
+            "trxId": "1"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": "34f661dcfe4b0022c5bd5c8a8"
-      },
-      "internalTrxId": "455444f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-01T17:26:56-0400",
-      "trxEffDt": "2012-04-01T00:00:00-0400",
-      "trxId": "0003"
-    },
-    {
-      "acctRef": null,
-      "amt": 5000,
-      "amtType": "D",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Consignacion local",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-03T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+        {
+            "acctRef": null,
+            "amt": 1000,
+            "amtType": "D",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "4f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6479434587,
-              "lon": -74.0636984718
+            "counterParty": null,
+            "description": "Consignacion en Oficina $20.000.000.00 en efectivo $0.00 en cheque",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "34f661dcfe4b0022c5bd5c8a8"
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "455444f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-15T17:26:56-0400",
+            "trxEffDt": "2012-06-15T00:00:00-0400",
+            "trxId": "2"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": null
-      },
-      "internalTrxId": "45a4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-03T14:33:04-0400",
-      "trxEffDt": "2012-04-03T00:00:00-0300",
-      "trxId": "0002"
-    },
-    {
-      "acctRef": null,
-      "amt": 12000,
-      "amtType": "D",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Abono a cuenta en oficina",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-03T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+        {
+            "acctRef": null,
+            "amt": 1000,
+            "amtType": "D",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "4f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6479434587,
-              "lon": -74.0636984718
+            "counterParty": null,
+            "description": "Consignacion en Oficina $20.000.000.00 en efectivo $0.00 en cheque",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "34f661dcfe4b0022c5bd5c8a8"
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "455444f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-17T17:26:56-0400",
+            "trxEffDt": "2012-06-17T00:00:00-0400",
+            "trxId": "3"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": null
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-03T05:45:21-0400",
-      "trxEffDt": "2012-04-03T00:00:00-0300",
-      "trxId": "0001"
-    },
-    {
-      "acctRef": null,
-      "amt": 20000,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-07T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+        {
+            "acctRef": null,
+            "amt": 5000,
+            "amtType": "D",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "4f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6479434587,
-              "lon": -74.0636984718
+            "counterParty": null,
+            "description": "Consignación local",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": null
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "45a4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-17T14:33:04-0400",
+            "trxEffDt": "2012-06-17T00:00:00-0300",
+            "trxId": "4"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-07T17:26:56-0400",
-      "trxEffDt": "2012-04-07T00:00:00-0400",
-      "trxId": "0087"
-    },
-    {
-      "acctRef": null,
-      "amt": 20000,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico (2)",
-      "enrichment": {
-        "attachments": null,
-        "checkin": null,
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": null
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-07T17:26:56-0400",
-      "trxEffDt": "2012-04-07T00:00:00-0400",
-      "trxId": "0087"
-    },
-    				    {
-      "acctRef": null,
-      "amt": 50000,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico (3)",
-      "enrichment": {
-        "attachments": null,
-        "checkin": null,
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": null
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-07T17:26:56-0400",
-      "trxEffDt": "2012-04-07T00:00:00-0400",
-      "trxId": "0087"
-    },
-    {
-      "acctRef": null,
-      "amt": 80000,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico (4)",
-      "enrichment": {
-        "attachments": null,
-        "checkin": null,
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": null
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-07T17:26:56-0400",
-      "trxEffDt": "2012-04-07T00:00:00-0400",
-      "trxId": "0087"
-    },
-    {
-      "acctRef": null,
-      "amt": 25000,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico (5)",
-      "enrichment": {
-        "attachments": null,
-        "checkin": null,
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": null
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-08T17:26:56-0400",
-      "trxEffDt": "2012-04-08T00:00:00-0400",
-      "trxId": "0087"
-    },
-    {
-      "acctRef": null,
-      "amt": 8475,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-10T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+        {
+            "acctRef": null,
+            "amt": 12000,
+            "amtType": "D",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "4f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6579434587,
-              "lon": -74.0736984718
+            "counterParty": null,
+            "description": "Abono a cuenta en oficina",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": null
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-18T05:45:21-0400",
+            "trxEffDt": "2012-06-18T00:00:00-0300",
+            "trxId": "5"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-10T17:26:56-0400",
-      "trxEffDt": "2012-04-10T00:00:00-0400",
-      "trxId": "0087"
-    },
-    {
-      "acctRef": null,
-      "amt": 5000,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico (2)",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-11T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+        {
+            "acctRef": null,
+            "amt": 20000,
+            "amtType": "W",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "4f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6379434587,
-              "lon": -74.0636984718
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-20T17:26:56-0400",
+            "trxEffDt": "2012-06-20T00:00:00-0400",
+            "trxId": "6"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-11T17:26:56-0400",
-      "trxEffDt": "2012-04-11T00:00:00-0400",
-      "trxId": "0087"
-    },
-    {
-      "acctRef": null,
-      "amt": 8475,
-      "amtType": "W",
-      "branchId": 40,
-      "counterParty": null,
-      "description": "Debito Transf. ACH Cajero Automatico (3)",
-      "enrichment": {
-        "attachments": null,
-        "checkin": {
-          "address": null,
-          "createdTime": "2012-04-11T13:39:27-0400",
-          "location": null,
-          "venue": {
-            "address": "CRA. 13 NO. 61-08",
+        {
+            "acctRef": null,
+            "amt": 20000,
+            "amtType": "W",
             "branchId": 40,
-            "category": "OFICINA",
-            "id": "4f63e0c699b868e31febbce3",
-            "location": {
-              "lat": 4.6479434587,
-              "lon": -74.0636984718
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático (2)",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": null
             },
-            "name": "CHAPINERO",
-            "tags": {"net": "PMP"}
-          }
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-06-30T17:26:56-0400",
+            "trxEffDt": "2012-06-30T00:00:00-0400",
+            "trxId": "7"
         },
-        "id": "4f661dcfe4b0022c5bd5c8a8",
-        "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
-      },
-      "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
-      "newAcctBal": null,
-      "trxDt": "2012-04-11T17:26:56-0400",
-      "trxEffDt": "2012-04-11T00:00:00-0400",
-      "trxId": "0087"
+        {
+            "acctRef": null,
+            "amt": 50000,
+            "amtType": "W",
+            "branchId": 40,
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático (3)",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": null
+            },
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-07-01T17:26:56-0400",
+            "trxEffDt": "2012-07-01T00:00:00-0400",
+            "trxId": "8"
+        },
+        {
+            "acctRef": null,
+            "amt": 80000,
+            "amtType": "W",
+            "branchId": 40,
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático (4)",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": null
+            },
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-07-05T17:26:56-0400",
+            "trxEffDt": "2012-07-05T00:00:00-0400",
+            "trxId": "9"
+        },
+        {
+            "acctRef": null,
+            "amt": 25000,
+            "amtType": "W",
+            "branchId": 40,
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático (5)",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": null
+            },
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-07-05T17:26:56-0400",
+            "trxEffDt": "2012-07-05T00:00:00-0400",
+            "trxId": "10"
+        },
+        {
+            "acctRef": null,
+            "amt": 8475,
+            "amtType": "W",
+            "branchId": 40,
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
+            },
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-07-12T17:26:56-0400",
+            "trxEffDt": "2012-07-12T00:00:00-0400",
+            "trxId": "11"
+        },
+        {
+            "acctRef": null,
+            "amt": 5000,
+            "amtType": "W",
+            "branchId": 40,
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático (2)",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
+            },
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-07-12T17:26:56-0400",
+            "trxEffDt": "2012-07-12T00:00:00-0400",
+            "trxId": "12"
+        },
+        {
+            "acctRef": null,
+            "amt": 8475,
+            "amtType": "W",
+            "branchId": 40,
+            "counterParty": null,
+            "description": "Débito Transf. ACH Cajero Automático (3)",
+            "enrichment": {
+                "attachments": null,
+                "checkin": null,
+                "id": "4f661dcfe4b0022c5bd5c8a8",
+                "internalTrxId": "4f661dcfe4b0022c5bd5c8a8"
+            },
+            "internalTrxId": "4f661dcfe4b0022c5bd5c8a8",
+            "newAcctBal": null,
+            "trxDt": "2012-07-12T17:26:56-0400",
+            "trxEffDt": "2012-07-12T00:00:00-0400",
+            "trxId": "13"
+        }
+    ],
+    "range": {
+        "fromDt": "2012-06-09T00:00:00-0400",
+        "toDt": "2012-07-12T00:00:00-0400"
     }
-  ]
 }

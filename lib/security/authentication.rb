@@ -36,5 +36,13 @@ module Security
       success_request 
       prepare_json_response 'ok','oauth', __method__.to_s()
     end
+    
+    post '/users/authenticate' do
+      requested_params = [:password]
+      http_requested_parameters_nil? requested_params
+      user = api_user
+      success_request 
+      response = (!user.nil? && user.password == params[:password])? prepare_json_response('ok', user.username ,__method__.to_s()) : prepare_json_response('nok', user.username ,__method__.to_s())
+    end
   end
 end

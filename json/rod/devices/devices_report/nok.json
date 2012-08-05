@@ -1,0 +1,7 @@
+{
+ "status":{
+     "success": false,
+     "code":"report_failed",
+     "description":"There was a problem in the database reporting the device"
+    }
+ }

@@ -1,0 +1,10 @@
+{
+    "status": {
+        "success": true
+    },
+    "device": {
+        "clientApp": {
+            "blacklist": "false"
+        }
+    }
+}

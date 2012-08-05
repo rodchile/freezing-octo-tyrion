@@ -8,6 +8,7 @@ require_relative 'security/oauth'
 require_relative 'security/authentication'
 require_relative 'accounts/accounts'
 require_relative 'transfers/internal_transfers'
+require_relative 'devices/devices.rb'
 
 module Jacket  
   configure :development  do
@@ -54,4 +55,5 @@ module Jacket
   use Security::Authentication
   use Accounts::Accounts
   use Transfers::Internal
+  use Devices::Report
 end
